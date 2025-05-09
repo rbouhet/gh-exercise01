@@ -1,0 +1,14 @@
+name: New Issue
+on: 
+  issues:
+    types: [opened]
+
+jobs:
+  displayInfo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Issue Information
+        run: echo "${{ github.event.issue }}"
+
+      - name: Display github context
+        run: echo "${{ github}}"
